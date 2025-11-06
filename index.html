@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="P.S. Tours - Reliable and comfortable transportation services in Delhi. Airport transfers, long tours, corporate travel, and daily commutes since 2002.">
+    <title>P.S. Tours - Trusted Transportation in Delhi | Car Rental Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="#home" class="logo-link" aria-label="P.S. Tours Home">
+                        <img src="images/logo.svg" alt="P.S. Tours" class="logo-img">
+                    </a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#fleet" class="nav-link">Our Fleet</a></li>
+                    <li><a href="#features" class="nav-link">Why Choose Us</a></li>
+                    <li><a href="#contact" class="nav-link">Book Now</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slider -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=1920&h=1080&fit=crop');">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Welcome to P.S. Tours</h1>
+                        <p class="hero-subtitle">Your Trusted Partner for Reliable and Comfortable Transportation in Delhi</p>
+                        <p class="hero-description">Experience premium travel services with our professional drivers and modern fleet. Serving Delhi since 2002.</p>
+                        <a href="#contact" class="btn btn-primary">Book Your Ride</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1920&h=1080&fit=crop');">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Luxury on Wheels</h1>
+                        <p class="hero-subtitle">Premium Fleet for Your Comfort</p>
+                        <p class="hero-description">Travel in style with our meticulously maintained fleet featuring Toyota Innova, Ciaz, and more. Your comfort is our priority.</p>
+                        <a href="#fleet" class="btn btn-primary">View Our Fleet</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1483721310020-03333e577078?w=1920&h=1080&fit=crop');">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">24/7 Support</h1>
+                        <p class="hero-subtitle">Always Here for You</p>
+                        <p class="hero-description">Airport transfers, long tours, corporate travel - we're available round the clock to serve your transportation needs.</p>
+                        <a href="#services" class="btn btn-primary">Our Services</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1920&h=1080&fit=crop');">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Two Decades of Excellence</h1>
+                        <p class="hero-subtitle">Trusted Since 2002</p>
+                        <p class="hero-description">Built on a foundation of trust and consistent service quality. Join thousands of satisfied customers who choose P.S. Tours.</p>
+                        <a href="#about" class="btn btn-primary">Our Story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Navigation Arrows -->
+        <button class="slider-arrow slider-arrow-prev" id="prevSlide" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="slider-arrow slider-arrow-next" id="nextSlide" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+        
+        <!-- Slider Indicators -->
+        <div class="slider-indicators">
+            <button class="slider-indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="slider-indicator" data-slide="1" aria-label="Go to slide 2"></button>
+            <button class="slider-indicator" data-slide="2" aria-label="Go to slide 3"></button>
+            <button class="slider-indicator" data-slide="3" aria-label="Go to slide 4"></button>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Legacy of Reliability</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">Welcome to P.S. Tours, your trusted partner for reliable and comfortable transportation services in the heart of Delhi. Located strategically on RK Ashram Lane, we have deep roots in the community and a commitment to serving our customers with excellence.</p>
+                    <p>Since our journey began in <strong>2002</strong>, P.S. Tours has grown into a reliable name in the industry, built on a foundation of trust and consistent service quality. For over two decades, we have been dedicated to one core mission: to deliver the best possible travel experience to every customer.</p>
+                    <p>This unwavering commitment is why we have cultivated a large and loyal customer base who rely on us for their daily commutes, corporate travel, and special tour needs. Our core philosophy ensures that the customer remains at the centre of all our business decisions and philosophy.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>Years of Excellence</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1000+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5</h3>
+                        <p>Vehicle Models</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Comprehensive transportation solutions for all your travel needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✈️</div>
+                    <h3>Airport Pick & Drop</h3>
+                    <p>Reliable and timely airport transfers ensuring you never miss a flight or wait unnecessarily.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>Long Tours</h3>
+                    <p>Comfortable long-distance travel with experienced drivers and well-maintained vehicles.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Corporate Travel</h3>
+                    <p>Professional transportation services for business meetings and corporate events.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Daily Commutes</h3>
+                    <p>Regular and reliable transportation for your everyday travel needs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3>Special Tours</h3>
+                    <p>Customized travel experiences for special occasions and memorable journeys.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📍</div>
+                    <h3>City Transfers</h3>
+                    <p>Quick and efficient transfers within Delhi and surrounding areas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="fleet">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Fleet: Built for Comfort and Choice</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">We believe your journey should be as comfortable as your destination</p>
+            </div>
+            <div class="fleet-content">
+                <p class="fleet-intro">P.S. Tours maintains a modern, clean, and comprehensively-serviced fleet, ensuring maximum comfort and safety for every passenger. We utilize popular, reliable vehicles that offer the perfect blend of space, luxury, and efficiency for any trip.</p>
+                <div class="fleet-grid">
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop" alt="Toyota Innova Crysta" loading="lazy">
+                        </div>
+                        <div class="fleet-body">
+                            <h3 class="fleet-title">Toyota Innova Crysta</h3>
+                            <div class="fleet-rating" aria-label="4.5 out of 5 stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span class="muted">★</span>
+                            </div>
+                            <div class="fleet-specs">
+                                <div class="spec"><span class="spec-icon">👤</span><span class="spec-text">7</span></div>
+                                <div class="spec"><span class="spec-icon">⚙️</span><span class="spec-text">Manual</span></div>
+                                <div class="spec"><span class="spec-icon">⛽</span><span class="spec-text">Diesel</span></div>
+                            </div>
+                            <button class="btn btn-primary book-now" data-vehicle="Toyota Innova Crysta">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop" alt="Attica" loading="lazy">
+                        </div>
+                        <div class="fleet-body">
+                            <h3 class="fleet-title">Attica</h3>
+                            <div class="fleet-rating" aria-label="4 out of 5 stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span class="muted">★</span>
+                            </div>
+                            <div class="fleet-specs">
+                                <div class="spec"><span class="spec-icon">👤</span><span class="spec-text">5-7</span></div>
+                                <div class="spec"><span class="spec-icon">⚙️</span><span class="spec-text">Manual</span></div>
+                                <div class="spec"><span class="spec-icon">⛽</span><span class="spec-text">Petrol</span></div>
+                            </div>
+                            <button class="btn btn-primary book-now" data-vehicle="Attica">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop" alt="Maruti Suzuki Dzire" loading="lazy">
+                        </div>
+                        <div class="fleet-body">
+                            <h3 class="fleet-title">Maruti Suzuki Dzire</h3>
+                            <div class="fleet-rating" aria-label="4 out of 5 stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span class="muted">★</span>
+                            </div>
+                            <div class="fleet-specs">
+                                <div class="spec"><span class="spec-icon">👤</span><span class="spec-text">4</span></div>
+                                <div class="spec"><span class="spec-icon">⚙️</span><span class="spec-text">Automatic</span></div>
+                                <div class="spec"><span class="spec-icon">⛽</span><span class="spec-text">Petrol</span></div>
+                            </div>
+                            <button class="btn btn-primary book-now" data-vehicle="Maruti Suzuki Dzire">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?w=800&h=600&fit=crop" alt="Maruti Suzuki Ciaz" loading="lazy">
+                        </div>
+                        <div class="fleet-body">
+                            <h3 class="fleet-title">Maruti Suzuki Ciaz</h3>
+                            <div class="fleet-rating" aria-label="5 out of 5 stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <div class="fleet-specs">
+                                <div class="spec"><span class="spec-icon">👤</span><span class="spec-text">5</span></div>
+                                <div class="spec"><span class="spec-icon">⚙️</span><span class="spec-text">Automatic</span></div>
+                                <div class="spec"><span class="spec-icon">⛽</span><span class="spec-text">Petrol</span></div>
+                            </div>
+                            <button class="btn btn-primary book-now" data-vehicle="Maruti Suzuki Ciaz">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop" alt="Kia Carens" loading="lazy">
+                        </div>
+                        <div class="fleet-body">
+                            <h3 class="fleet-title">Kia Carens</h3>
+                            <div class="fleet-rating" aria-label="4.5 out of 5 stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span class="muted">★</span>
+                            </div>
+                            <div class="fleet-specs">
+                                <div class="spec"><span class="spec-icon">👤</span><span class="spec-text">7</span></div>
+                                <div class="spec"><span class="spec-icon">⚙️</span><span class="spec-text">Manual</span></div>
+                                <div class="spec"><span class="spec-icon">⛽</span><span class="spec-text">Diesel</span></div>
+                            </div>
+                            <button class="btn btn-primary book-now" data-vehicle="Kia Carens">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose P.S. Tours</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">We're dedicated to delivering more than just a ride – we offer an unforgettable experience</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Insider Knowledge</h3>
+                    <p>Our local expertise ensures you discover hidden gems and make the most of your journey.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <h3>Luxury on Wheels</h3>
+                    <p>Our meticulously maintained fleet is designed to provide comfort and style, no matter the terrain.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Your Safety, Our Priority</h3>
+                    <p>Our professional drivers are trained to ensure your safety and comfort throughout your trip.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Your Way, Your Way</h3>
+                    <p>We tailor each journey to your unique preferences and needs.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Hassle-Free Booking</h3>
+                    <p>Book online in seconds or let our friendly team guide you through the process.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🕐</div>
+                    <h3>Always Here for You</h3>
+                    <p>Our 24/7 support team is just a call away, whenever you need us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Booking Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book Your Ride</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Fill out the form below and we'll get back to you promptly to confirm your booking</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <p>We are here to assist with any booking or inquiry you may have. We encourage you to contact us directly during our business hours for prompt and personalized assistance.</p>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>RK Ashram Lane, Delhi</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>Contact us for booking</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@pstours.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>24/7 Support Available</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="booking-form" id="bookingForm">
+                    <!-- Formspark honeypot to reduce spam submissions -->
+                    <input type="text" name="_gotcha" autocomplete="off" style="display:none">
+                    <!-- Optional subject line for Formspark emails -->
+                    <input type="hidden" name="_subject" value="New Booking Request - P.S. Tours">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickupDate">Pickup Date *</label>
+                            <input type="date" id="pickupDate" name="pickupDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickupTime">Pickup Time *</label>
+                            <input type="time" id="pickupTime" name="pickupTime" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickupLocation">Pickup Location *</label>
+                        <input type="text" id="pickupLocation" name="pickupLocation" required placeholder="Enter pickup address">
+                    </div>
+                    <div class="form-group">
+                        <label for="dropLocation">Drop Location *</label>
+                        <input type="text" id="dropLocation" name="dropLocation" required placeholder="Enter drop address">
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle">Preferred Vehicle</label>
+                        <select id="vehicle" name="vehicle">
+                            <option value="">Select a vehicle</option>
+                            <option value="Toyota Innova Crysta">Toyota Innova Crysta</option>
+                            <option value="Attica">Attica</option>
+                            <option value="Maruti Suzuki Dzire">Maruti Suzuki Dzire</option>
+                            <option value="Maruti Suzuki Ciaz">Maruti Suzuki Ciaz</option>
+                            <option value="Kia Carens">Kia Carens</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceType">Service Type *</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">Select service type</option>
+                            <option value="Airport Pick & Drop">Airport Pick & Drop</option>
+                            <option value="Long Tour">Long Tour</option>
+                            <option value="Corporate Travel">Corporate Travel</option>
+                            <option value="Daily Commute">Daily Commute</option>
+                            <option value="Special Tour">Special Tour</option>
+                            <option value="City Transfer">City Transfer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="passengers">Number of Passengers</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" placeholder="Number of passengers">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Requirements</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Any special requirements or additional information..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Submit Booking Request</button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>P.S. Tours</h3>
+                    <p>Your trusted partner for reliable and comfortable transportation services in Delhi since 2002.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#fleet">Our Fleet</a></li>
+                        <li><a href="#contact">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Airport Pick & Drop</li>
+                        <li>Long Tours</li>
+                        <li>Corporate Travel</li>
+                        <li>Daily Commutes</li>
+                        <li>Special Tours</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 RK Ashram Lane, Delhi</p>
+                    <p>📞 Contact us for booking</p>
+                    <p>✉️ info@pstours.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 P.S. Tours. All rights reserved. | Serving Delhi since 2002</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
