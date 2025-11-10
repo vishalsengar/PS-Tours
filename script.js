@@ -655,4 +655,144 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // Initialize testimonial slider
+    initTestimonialSlider();
 });
+
+// ============================================
+// TESTIMONIAL SLIDER FUNCTIONALITY
+// ============================================
+
+/**
+ * Initialize testimonial slider with auto-play and navigation
+ */
+function initTestimonialSlider() {
+    const testimonialSlides = document.querySelectorAll(".testimonial-slide");
+    const testimonialIndicators = document.querySelectorAll(".testimonial-indicator");
+    const testimonialPrevBtn = document.getElementById("testimonialPrev");
+    const testimonialNextBtn = document.getElementById("testimonialNext");
+    let currentTestimonial = 0;
+    let testimonialInterval = null;
+    const TESTIMONIAL_AUTO_PLAY_DELAY = 6000; // 6 seconds
+
+    if (testimonialSlides.length === 0) {
+        return;
+    }
+
+    /**
+     * Show specific testimonial
+     * @param {number} index - Testimonial index to show
+     */
+    function showTestimonial(index) {
+        testimonialSlides.forEach((slide) => slide.classList.remove("active"));
+        testimonialIndicators.forEach((indicator) => indicator.classList.remove("active"));
+
+        if (index < 0) {
+            currentTestimonial = testimonialSlides.length - 1;
+        } else if (index >= testimonialSlides.length) {
+            currentTestimonial = 0;
+        } else {
+            currentTestimonial = index;
+        }
+
+        testimonialSlides[currentTestimonial].classList.add("active");
+        if (testimonialIndicators[currentTestimonial]) {
+            testimonialIndicators[currentTestimonial].classList.add("active");
+        }
+    }
+
+    /**
+     * Go to next testimonial
+     */
+    function nextTestimonial() {
+        showTestimonial(currentTestimonial + 1);
+        resetTestimonialAutoPlay();
+    }
+
+    /**
+     * Go to previous testimonial
+     */
+    function prevTestimonial() {
+        showTestimonial(currentTestimonial - 1);
+        resetTestimonialAutoPlay();
+    }
+
+    /**
+     * Start auto-play
+     */
+    function startTestimonialAutoPlay() {
+        stopTestimonialAutoPlay();
+        testimonialInterval = setInterval(() => {
+            nextTestimonial();
+        }, TESTIMONIAL_AUTO_PLAY_DELAY);
+    }
+
+    /**
+     * Stop auto-play
+     */
+    function stopTestimonialAutoPlay() {
+        if (testimonialInterval) {
+            clearInterval(testimonialInterval);
+            testimonialInterval = null;
+        }
+    }
+
+    /**
+     * Reset auto-play
+     */
+    function resetTestimonialAutoPlay() {
+        stopTestimonialAutoPlay();
+        startTestimonialAutoPlay();
+    }
+
+    // Set up navigation buttons
+    if (testimonialPrevBtn) {
+        testimonialPrevBtn.addEventListener("click", prevTestimonial);
+    }
+
+    if (testimonialNextBtn) {
+        testimonialNextBtn.addEventListener("click", nextTestimonial);
+    }
+
+    // Set up indicator clicks
+    testimonialIndicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", () => {
+            showTestimonial(index);
+            resetTestimonialAutoPlay();
+        });
+    });
+
+    // Start auto-play
+    startTestimonialAutoPlay();
+
+    // Pause auto-play on hover
+    const testimonialsSection = document.querySelector(".testimonials-slider-wrapper");
+    if (testimonialsSection) {
+        testimonialsSection.addEventListener("mouseenter", stopTestimonialAutoPlay);
+        testimonialsSection.addEventListener("mouseleave", startTestimonialAutoPlay);
+    }
+
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const minSwipeDistance = 50;
+
+    if (testimonialsSection) {
+        testimonialsSection.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        testimonialsSection.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const swipeDistance = touchEndX - touchStartX;
+            if (Math.abs(swipeDistance) > minSwipeDistance) {
+                if (swipeDistance > 0) {
+                    prevTestimonial();
+                } else {
+                    nextTestimonial();
+                }
+            }
+        });
+    }
+}
